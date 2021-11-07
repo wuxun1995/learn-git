@@ -43,3 +43,7 @@ You can improve it by sending pull requests to [this repository](https://github.
 # [Contributing](https://github.com/facebook/react/#contributing)
 
 ## The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+
+# [Code of Conduct](https://github.com/facebook/react/#code-of-conduct)
+
+## Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
