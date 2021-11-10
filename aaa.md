@@ -47,11 +47,16 @@ You can improve it by sending pull requests to [this repository](https://github.
 ## We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
 
 
-```function HelloMessage({  name  }){  return <div>Hello {name}</div>;}```
+```
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
 
-
-
-```ReactDOM.render(<HelloMessage name="Taylor"  />, document.getElementById('container))```
+ReactDOM.render(
+  <HelloMessage name="Taylor" />,
+  document.getElementById('container')
+);
+```
 
 # [**Contributing**](https://github.com/facebook/react/#contributing)
 
