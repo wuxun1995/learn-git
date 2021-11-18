@@ -50,6 +50,27 @@
       ul.a li:last-child {
         margin-bottom: 0;
       }
+      ul.b {
+        width: 600px;
+        margin: auto;
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+      }
+      ul.b li {
+        border-bottom: 1px dotted;
+        padding-top: 1px;
+        margin-top: -1px;
+        margin-bottom: -1px;
+      }
+      footer {
+        background-color: green;
+        margin-top: 25px;
+      }
+      footer p {
+        margin: auto;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -72,6 +93,7 @@
       <li>产品</li>
       <li>产品</li>
     </ul>
+    <br>
     <ul class="b">
       <li>link</li>
       <li>link</li>
@@ -79,4 +101,8 @@
       <li>link</li>
     </ul>
   </body>
+  <footer>
+    <p>©版权所有<br>
+      本页所有布局均使用块元素</p>
+  </footer>
 </html>
