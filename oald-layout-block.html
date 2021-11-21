@@ -69,23 +69,29 @@
         margin: 0 25px;
 
       }
-      section {
-        display: inline-block;
-        height: calc(100 - 75px);
-        font-size: 25px;
-        font-family: "宋体";
-        border-top: 1px solid black;
-        box-sizing: border-box;
-        overflow: auto;
+      div.a {
+        border-top: 1px solid #000;
+      box-sizing: border-box;
+      padding: 1em;
+      height: calc(100vh - 72px);
+      overflow: auto;
       }
-    header {
-     padding: 25px 0;
-     line-height: 30px;
-     margin: 0;
-    }
-    ol {
-        padding: 15px 0 ;
-    }
+      .a p {
+        display: inline-block;
+        height: 60px;
+        width: 100%;
+        vertical-align:middle;
+        font-size: 30px;
+        text-indent: 15px;
+      }
+      .a ol {
+        display: inline-block;
+        margin: 16px 0px;
+      }
+      ol > * {
+        text-align: left;
+        font-size: 25px;
+      }
     </style>
   </head>
   <body>
@@ -196,14 +202,14 @@
       </aside>
       <main>
         <h2>fantasy</h2>
-        <section>
-        <header>Lorem, ipsum.</header>
+        <div class="a">
+        <p>Lorem, ipsum.</p>
         <ol>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore reprehenderit porro sequi commodi atque vitae quae at nemo consequatur culpa repellendus sit praesentium, temporibus architecto quas hic ipsum repellat quia!</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores at est ipsam porro minus ab odio placeat explicabo incidunt dignissimos distinctio magni adipisci ut ex perferendis illum, praesentium eum quidem?</li>
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur eligendi nobis iste harum, dolorum deleniti rem enim consequuntur voluptatum explicabo iure! Provident esse eaque ex aut quo dolor inventore!</li>
           </ol>
-      </section>
+        </div>
       </main>
       <aside>
         <h2>Vocabulary</h2>
