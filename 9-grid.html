@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 5px outset blue;
+        margin: auto;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        border: 5px solid blue;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      td:hover {
+        border: 5.1px solid red;
+      }
+
+      label {
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        line-height: 180px;
+        background-color: green;
+      }
+
+      input:checked+label {
+        background-color: rgb(165, 202, 165);
+        line-height: 140px;
+        font-size: 50px;
+        transition: 5s;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <table>
+      <tr>
+        <td id="r1c1">1</td>
+        <td id="r1c2">2</td>
+        <td id="r1c3">3</td>
+      </tr>
+      <tr>
+        <td id="r2c1">4</td>
+        <td id="r2c2">5</td>
+        <td id="r2c3">6</td>
+      </tr>
+      <tr>
+        <td id="r3c1">7</td>
+        <td id="r3c2">8</td>
+        <td id="r3c3">9</td>
+      </tr>
+    </table>
+    <div>
+      <input type="checkbox" id="dingyue" hidden>
+      <label for="dingyue">订阅博客</label>
+    </div>
+  </body>
+</html>
