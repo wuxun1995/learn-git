@@ -4,21 +4,43 @@
     <meta charset="utf-8">
     <title>Document</title>
     <style>
-      div {
+      main {
         width: 200px;
         height: 100px;
         border: 2px solid;
+        box-sizing: border-box;
         position: relative;
         border-radius: 50px;
+        margin: auto;
       }
-      input {
+      label {
+        display: block;
+        position: absolute;
+        width: 94px;
+        height: 94px;
+        border: 1px solid gray;
+        background-color: greenyellow;
+        box-sizing: border-box;
+        border-radius: 47px;
+        top: 1px;
+        left: 1px;
 
+        transition: 0.5s;
+      }
+      input:checked+main {
+      background-color: rgb(48, 243, 75);
+      transition: 1s;
+    }
+      input:checked+main  label {
+        left: 100px;
+        transition: 0.5s ease;
       }
     </style>
   </head>
   <body>
-    <div>
-      <input type="radio">
-    </div>
+    <div >
+      <input type="checkbox" id="heart" hidden>
+      <main><label for="heart"></label></main>
+      </div>
   </body>
 </html>
