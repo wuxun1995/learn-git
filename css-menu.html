@@ -4,12 +4,76 @@
     <meta charset="utf-8">
     <title>Docunment</title>
     <style>
-      div {
-
+      .menu {
+        display: flex;
+        flex-wrap: nowrap;
       }
+      html,body,div {
+        width: 100%;
+        xbackground-color: rgba(0,0,0,0.5);
+        margin: 0;
+      }
+      div > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 50px;
+        xwidth: 100px;
+        xborder: 2px solid rgba(63,117,167);
+        background-color: #cac1c1;
+      }
+      ul.menu > li {
+        display: inline-block;
+        margin-right: 50px;
+      }
+      li {
+          list-style: none;
+          position: relative;
+          white-space: nowrap;
+          top: 10px;
+          left: 0;
+          color: white;
+          height: 30px;
+          width: 80px;
+          background-color: #cac1c1;
+          text-align: center;
+      }
+        li:hover {
+            background-color: gold;
+          }
+        ul ul {
+          display: none;
+          position: absolute;
+        }
+        li:hover > ul {
+          display: block;
+        }
+        .wenjian {
+          position: absolute;
+          left: -10px;
+          top: 20px;
+        }
     </style>
   </head>
   <body>
-    <div></div>
+    <div>
+      <ul class="menu">
+        <li>文件
+          <ul class="wenjian">
+            <li>打开文件</li>
+            <li>文件夹</li>
+            <li>退出</li>
+            <li>选择
+              <ul>
+                <li>编辑</li>
+                <li>菜单</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>查看</li>
+        <li>运行</li>
+      </ul>
+    </div>
   </body>
 </html>
