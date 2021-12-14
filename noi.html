@@ -87,7 +87,7 @@
 </script>
 
 <script id="ch0103/13">
-  var a = Number(prompt("a")) && a > 100
+  var a = Number(prompt("a")) && a >= 100
   var b = a % 10
   var c = (a % 100 - b) / 10
   var d = (a - a % 100) / 100
@@ -96,14 +96,53 @@
 </script>
 
 <script id="ch0103/14">
-  var a = Number(prompt(""))
-  var b = Number(prompt(""))
-  alert((a / b).toFixed(9))
+  var h = Number(prompt("h"))
+  var r = Number(prompt("r"))
+  var n = (20 * 1000) / (pi * r * r * h)
+  alert(Math.ceil(n))
 </script>
 
-<script id="ch0103/">
-  var a = Number(prompt(""))
-  var b = Number(prompt(""))
-  alert((a / b).toFixed(9))
+<script id="ch0103/15">
+  var x = Number(prompt("小时"，"x"))
+  var y = Number(prompt("小时"，"y"))
+  var n = Number(prompt("n"))
+  var z = (1 / x) * y
+  alert(n - Math.ceil(z))
 </script>
 
+<script id="ch0103/16">
+  var A = (Xa,Ya)
+  var B = (Xb,Yb)
+  var n = (Xb - Xa) * (Xb - Xa) - (Yb - Ya) * (Yb - Ya)
+  alert((Math.sqrt(n)).toFixed(3))
+</script>
+
+<script id="ch0103/17">
+  var x1 = Number(prompt(""))
+  var x2 = Number(prompt(""))
+  var x3 = Number(prompt(""))
+  var y1 = Number(prompt(""))
+  var y2 = Number(prompt(""))
+  var y3 = Number(prompt(""))
+  var S = (1 / 2) * (x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2)
+  alert(Math.ceil(n))
+</script>
+
+<script id="ch0103/18">
+  var a1 = Number(prompt(""))
+  var a2 = Number(prompt(""))
+  var n = Number(prompt(""))
+  var an = a1 + (n - 1) * (a2 - a1)
+  alert(an)
+</script>
+
+<script id="ch0103/19">
+  var A = Number(prompt("")) && A > 0
+  var B = Number(prompt("")) && B > 0
+  alert(A * B)
+</script>
+
+<script id="ch0103/20">
+  var n = Number(prompt("")) && n >= 0
+  alert(Math.pow(n,2))
+</script>
