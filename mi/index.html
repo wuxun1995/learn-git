@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dcoument</title>
+    <style type="text/less">
+      html,body {
+        height: 100%;
+        margin: 0;
+        overflow: scroll;
+        font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+      }
+      .top1 {
+        width: 100%;
+        height: 40px;
+        background-color: rgba(51,51,51);
+      }
+      .top-nav {
+        width: 1226px;
+        height: 40px;
+        margin: auto;
+        font-size: 12px;
+        background-color: rgba(51,51,51);
+      }
+      a {
+        text-decoration: none;
+        color: #b0b0b0;
+        display: inline-block;
+        line-height: 40px;
+      }
+      a:hover {
+        color: white;
+      }
+      span.sep {
+        color: #424242;
+        margin: 0 3.6px;
+        height: 16px;
+      }
+      .list {
+       float: right;
+       padding-right: 16px;
+       a {
+         margin: 0 6px;
+       }
+      }
+      .shopping {
+          float: right;
+          width: 120px;
+          background-color: rgba(66,66,66);
+          position: relative;
+          display: inline-block;
+          a.cart {
+              width: 120px;
+              text-align: center;
+          }
+          .cart-list {
+              position: absolute;
+              display: none;
+              right: 0;
+              top:100%;
+              width: 320px;
+              height: 100px;
+              line-height: 100px;
+              text-align: center;
+              transition: .3s;
+          }
+          &:hover .cart-list {
+              display: block;
+              background-color: rgba(243,243,243);
+          }
+        }
+        .cart:hover {
+            color: #ff6700;
+            background-color: white;
+          }
+          .product-nav {
+            height: 100px;
+            width: 1226px;
+            margin: auto;
+            position: absolute;
+          }
+          .logo {
+            float: left;
+            height: 100px;
+            width: 62px;
+            img {
+              left: 0;
+              height: 56px;
+              width: 56px;
+              margin: 22px 0 0;
+            }
+          }
+          .name {
+            float: left;
+            list-style: none;
+            padding: 0 0 0 142px;
+            margin: 12px 0 0 30px;
+            width: 1130px;
+            height: 100px;
+            .type {
+              display: inline-block;
+              font-size: 16px;
+              line-height: 88px;
+              text-align: center;
+              padding: 26px 10px 38px;
+            }
+          }
+    </style>
+  </head>
+  <body>
+    <header class="top1">
+      <div class="top-nav">
+        <div class="menu">
+          <a href="https://www.mi.com/index.html">小米商城</a>
+          <span class="sep">|</span>
+          <a href="https://www.miui.com/">MIUI</a>
+          <span class="sep">|</span>
+          <a href="#">loT</a>
+          <span class="sep">|</span>
+          <a href="#">云服务</a>
+          <span class="sep">|</span>
+          <a href="#">天星数科</a>
+          <span class="sep">|</span>
+          <a href="#">有品</a>
+          <span class="sep">|</span>
+          <a href="#">小爱开放平台</a>
+          <span class="sep">|</span>
+          <a href="#">企业团购</a>
+          <span class="sep">|</span>
+          <a href="#">资质证照</a>
+          <span class="sep">|</span>
+          <a href="#">协议规则</a>
+          <span class="sep">|</span>
+          <a href="#">下载app</a>
+          <span class="sep">|</span>
+          <a href="#">智能生活</a>
+          <span class="sep">|</span>
+          <a href="#">Select Location</a>
+          <div class="shopping">
+            <a href="https://www.mi.com/buy/cart" class="cart">购物车 （0）</a>
+            <span class="cart-list"> 购物车中还没有商品，赶紧选购吧！ </span>
+          </div>
+          <div class="list">
+             <a href="#">登录</a>
+             <span class="sep">|</span>
+             <a href="#">注册</a>
+             <span class="sep">|</span>
+             <a href="#">消息通知</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-nav">
+          <a href="https://www.mi.com/index.html" class="logo">
+            <img src="https://s02.mifile.cn/assets/static/image/logo-mi2.png">
+          </a>
+          <ul class="name">
+            <li class="type">Xiaomi手机</li>
+            <li class="type">Redmi红米</li>
+            <li class="type">电视</li>
+            <li class="type">笔记本</li>
+            <li class="type">平板</li>
+            <li class="type">家电</li>
+            <li class="type">路由器</li>
+            <li class="type">服务</li>
+            <li class="type">社区</li>
+          </ul>
+          <form class="search">
+            <input type="text"><button></button>
+          </form>
+        </div>
+  </body>
+  <script src="./less.min.js"></script>
+</html>
