@@ -27,7 +27,7 @@
 </script>
 
 <script id="ch0103/05">
-  var a = Number(prompt(""))（a / b * 100）+%
+  var a = Number(prompt(""))
   var b = Number(prompt(""))
   alert((a / b).toFixed(9))
 </script>
@@ -44,11 +44,12 @@
   var c = Number(prompt())
   var d = Number(prompt())
   var x = Number(prompt())
-  alert((a * A + b * B + c * x + d).toFixed(7))
+  result = a * x * x * x + b * x * x + c * x + d
+  alert(result.toFixed(7))
 </script>
 
 <script id="ch0103/08">
-  var F = NumCber(prompt('F'))
+  var F = NumCber(prompt(""))
   var C = 5 * (F - 32) / 9
   alert(C.toFixed(5))
 </script>
@@ -69,9 +70,10 @@
 </script>
 
 <script id="ch0103/11">
-  var a = Number(prompt("")) && a > 0
-  var b = Number(prompt("")) && b > 0
-  alert((a % b).toFixed(4))
+  var a = Number(prompt(""))
+  var b = Number(prompt(""))
+  result = a % b
+  console.log(result.toFixed(4))
 </script>
 
 <script id="ch0103/12">
