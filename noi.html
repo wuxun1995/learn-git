@@ -33,19 +33,20 @@
 </script>
 
 <script id="ch0103/06">
-  var b = Number(prompt(""))
-  var a = Number(prompt(""))
-  alert((a / b * 100).toFixed(3) + %)
+  var a = Number(prompt("确诊数"，""))
+  var b = Number(prompt("死亡数"，""))
+  var result = b / a * 100
+  alert(result.toFixed(3) + '%')
 </script>
 
 <script id="ch0103/07">
+  var x = Number(prompt())
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
-  var x = Number(prompt())
   var d = Number(prompt())
   var result = a * x * x * x + b * x * x + c * x + d
-  alert(result.toFixed(7))
+  console.log(result.toFixed(7))
 </script>
 
 <script id="ch0103/08">
@@ -58,11 +59,11 @@
   var r = Number(prompt('r'))
   var pi = 3.14159
   var diameter = 2 * r
-  var L = 2 * r * Pi
-  var S = pi * r * r
-  alert(diameter.toFixed(4))
-  alert(L.toFixed(4))
-  alert(S.toFixed(4))
+  var L = 2 * Pi * r
+  var A = pi * r * r
+  console.log(diameter.toFixed(4))
+  console.log(L.toFixed(4))
+  console.log(A.toFixed(4))
 </script>
 
 <script id="ch0103/10">
