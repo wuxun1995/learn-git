@@ -113,8 +113,8 @@
   var Xb = Number(prompt())
   var Ya = Number(prompt())
   var Yb = Number(prompt())
-  var n = (Xb - Xa) * (Xb - Xa) - (Yb - Ya) * (Yb - Ya)
-  alert((Math.sqrt(n)).toFixed(3))
+  var n = Math.sqrt(Math.pow(Xb - Xa,2) -  Math.pow(Yb - Ya,2))
+  alert(n.toFixed(3))
 </script>
 
 <script id="ch0103/17">
@@ -137,12 +137,12 @@
 </script>
 
 <script id="ch0103/19">
-  var A = Number(prompt("")) && A > 0
-  var B = Number(prompt("")) && B > 0
+  var A = Number(prompt(""))
+  var B = Number(prompt(""))
   alert(A * B)
 </script>
 
 <script id="ch0103/20">
-  var n = Number(prompt("")) && n >= 0
+  var n = Number(prompt(""))
   alert(Math.pow(n,2))
 </script>
