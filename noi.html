@@ -228,5 +228,176 @@
     console.log(3)
     console.log(5)
     console.log(7)
+  } else if (n % 3 == 0 && n % 5 == 0) {
+    console.log(3)
+    console.log(5)
+  } else if (n % 3 == 0 && n % 7 == 0) {
+    console.log(3)
+    console.log(7)
+  } else if (n % 5 == 0 && n % 7 == 0) {
+    console.log(5)
+    console.log(7)
+  } else if (n % 3 == 0 && n % 7 !== 0 && n % 5 !== 0) {
+    console.log(3)
+  } else if (n % 3 !== 0 && n % 7 !== 0 && n % 5 == 0) {
+    console.log(5)
+  } else if (n % 3 !== 0 && n % 7 == 0 && n % 5 !== 0) {
+    console.log(7)
+  } else if (n % 3 !== 0 && n % 7 !== 0 && n % 5 !== 0) {
+    console.log(n)
   }
+</script>
+
+<script id="ch0104/10" type="">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  if ((a > 60 && b < 60) || (a < 60 && b > 60)) {
+    console.log(1)
+  } else {
+    console.log(0)
+  }
+</script>
+
+<script id="ch0104/11" type="">
+  var a = Number(prompt())
+  if (a == 1 || a == 3 || a == 5) {
+    console.log(NO)
+  } else {
+    console.log(YES)
+  }
+</script>
+
+<script id="ch0104/12" type="">
+  var a = Number(prompt())
+  var biketime = 27 + 23 + a / 3
+  var walktime = a / 1.2
+  if (biketime > walktime) {
+    console.log(Bike)
+  } else if (biketime < walktime) {
+    console.log(Walk)
+  } else if (biketime == walktime) {
+    console.log(All)
+  }
+</script>
+
+<script id="ch0104/13" type="">
+  var x = Number(prompt())
+  if (x >= 0 && x < 5) {
+    y = -x +2.5
+    console.log(y.toFixed(3))
+  } else if (x >= 5 && x < 10) {
+    y = 2 - 1.5 * (x - 3) * (x - 3)
+    console.log(y.toFixed(3))
+  } else if (x >= 10 && x <20) {
+    y = x / 2 - 1.5
+    console.log(y.toFixed(3))
+  }
+</script>
+
+<script id="ch0104/14" type="">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  if (a <= 1000 && b == y) {
+    result = 8 + 5
+    console.log(result)
+  } else if(a <= 1000 && b == n) {
+    result = 8
+    console.log(reult)
+  } else if (a > 1000 && b == y) {
+    if ((a - 1000) % 500 == 0) {
+      result = 8 + 5 + (a - 1000) / 500 * 4
+      console.log(result)
+    } else if ((a - 1000) % 500 !== 0) {
+      result = 8 + 5 + (a - 1000) / 500 * 4 + 4
+      console.log(result)
+    }
+  } else if(a > 1000 && b == n) {
+    if ((a - 1000) % 500 == 0) {
+      result = 8 + (a - 1000) / 500 * 4
+      console.log(result)
+    } else if ((a - 1000) % 500 !== 0) {
+      result = 8 + 5 + (a - 1000) / 500 * 4 + 4
+      console.log(result)
+    }
+  }
+</script>
+
+<script id="ch0104/15" type="">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  console.log(Math.max(a,b,c))
+</script>
+
+<script id="ch0104/16" type="">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  if (a + b > c && a + c > b && b + c > a) {
+    console.log(yes)
+  } else {
+    console.log(no)
+  }
+</script>
+
+<script id="ch0104/17" type="">
+  var a = Number(prompt())
+  if ((a % 4 == 0 && a % 100 !== 0) || (a % 100 == 0 && a % 400 == 0)) {
+    console.log(Y)
+  } else {
+    console.log(N)
+  }
+</script>
+
+<script id="ch0104/18" type="">
+  var x = Number(prompt())
+  var y = Number(prompt())
+  if ((x <= 1 && x >= -1) && (y <= 1 && y >= -1)) {
+    console.log(yes)
+  } else {
+    console.log(no)
+  }
+</script>
+
+<script id="ch0104/19" type="">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  if (b !== 0 && (c == + || c == - || c == * || c == /)) {
+    result = a / b
+    console.log(result)
+  } else if (b == 0) {
+    console.log(Divided by zero)
+  } else if (c !== + && c !== - && c !== * && c !== /) {
+    console.log(Invalid operator)
+  }
+</script>
+
+<script id="ch0104/20" type="">
+  var a = parseInt(prompt('a:'))
+  var b = parseInt(prompt('b:'))
+  var c = parseInt(prompt('c:'))
+  var delta = b * b - 4 * a * c
+  if (delta < 0){
+    console.log('无解')
+  } else {
+    if (delta == 0) {
+      var x = (-b) / (2 * a)
+      console.log('x1=x2' + x)
+    } else {
+      var sprtDelta = Math.sqrt(delta)
+      var x1 = (-b + sprtDelta) / (2 * a)
+      var x2 = (-b - sprtDelta) / (2 * a)
+      alert('x1=' + x1)
+      alert('x2=' + x2)
+    }
+  }
+</script>
+
+<script id="ch0104/21" type="">
+  var n = Number(prompt())
+  var x = Number(prompt())
+  var y = Number(prompt())
+  result =n - Math.ceil(1 / x * y )
+  alert(result)
 </script>
