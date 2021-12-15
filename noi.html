@@ -1,21 +1,21 @@
 <script id="ch0103/01">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
- alert(a + b)
+  console.log(a + b)
 </script>
 
 <script id="ch0103/02">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
   var c = Number(prompt(""))
-  alert((a + b) * c)
+   console.log((a + b) * c)
 </script>
 
 <script id="ch0103/03">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
   var c = Number(prompt(""))
-  alert(parseInt((a + b) / c))
+   console.log(parseInt((a + b) / c))
 </script>
 
 <script id="ch0103/04">
@@ -23,20 +23,20 @@
   var b = Number(prompt(""))
   var y = (a % b)
   var x = ((a - (a % b)) / b)
-  alert(x,y)
+   console.log(x,y)
 </script>
 
 <script id="ch0103/05">
-  var a = Number(prompt(""))
+  var a = Numbe(prompt(""))
   var b = Number(prompt(""))
-  alert((a / b).toFixed(9))
+  console.log((a / b).toFixed(9))
 </script>
 
 <script id="ch0103/06">
-  var a = Number(prompt("确诊数"，""))
-  var b = Number(prompt("死亡数"，""))
+  var a = Number(prompt())
+  var b = Number(prompt())
   var result = b / a * 100
-  alert(result.toFixed(3) + '%')
+  console.log(result.toFixed(3) + '%')
 </script>
 
 <script id="ch0103/07">
@@ -52,7 +52,7 @@
 <script id="ch0103/08">
   var F = Number(prompt('F'))
   var C = 5 * (F - 32) / 9
-  alert(C.toFixed(5))
+  console.log(C.toFixed(5))
 </script>
 
 <script id="ch0103/09">
@@ -84,50 +84,59 @@
   var r = Number(prompt(""))
   var pi = 3.14
   var V = (4 / 3) * 3.14 * r * r * r
-  alert(V.toFixed(2))
+  console.log(V.toFixed(2))
 </script>
 
 <script id="ch0103/13">
   var n = Number(prompt(""))
   var gewei = n % 10
-  var shiwei = (n % 100 - gewei) / 10
-  var baiwei = (n - n % 100) / 100
+  var shiwei = (n - gewei) % 100 / 10
+  var baiwei = (n - shiwei * 10 - gewei) / 100 % 10
   var result = String(geiwei) + String(shiwei) + String(baiwei)
-  alert(result)
+  console.log(result)
 </script>
 
 <script id="ch0103/14">
   var h = Number(prompt())
   var r = Number(prompt())
-  var n = (20 * 1000) / (pi * r * r * h)
-  alert(Math.ceil(n))
+  var pi = 3.14159
+  var v = pi * r * r * h / 1000
+  var result = Math.ceil(20 / v)
+  console.log(result)
 </script>
 
 <script id="ch0103/15">
+  var n = Number(prompt())
   var x = Number(prompt())
   var y = Number(prompt())
-  var n = Number(prompt())
   var result = n - Math.ceil((1 / x) * y)
-  alert(result)
+  console.log(result)
 </script>
 
 <script id="ch0103/16">
-  var Xa = Number(prompt())
-  var Xb = Number(prompt())
-  var Ya = Number(prompt())
-  var Yb = Number(prompt())
-  var n = Math.sqrt(Math.pow(Xb - Xa,2) -  Math.pow(Yb - Ya,2))
-  alert(n.toFixed(3))
+  var xa = Number(prompt())
+  var xb = Number(prompt())
+  var ya = Number(prompt())
+  var yb = Number(prompt())
+  var dx = xa - xb
+  var dy = ya - yb
+  var result = Math.sqrt(dx * dx + dy * dy)
+  console.log(result.toFixed(3))
 </script>
 
 <script id="ch0103/17">
   var x1 = Number(prompt(""))
   var x2 = Number(prompt(""))
   var x3 = Number(prompt(""))
+  var y1 = Number(prompt(""))
   var y2 = Number(prompt(""))
   var y3 = Number(prompt(""))
-  var S = (1 / 2) * (x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2)
-  alert(Math.ceil(S))
+  var a = Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2))
+  var b = Math.sqrt(Math.pow((x1 - x3), 2) + Math.pow((y1 - y3), 2))
+  var c = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2))
+  var p = (a + b + c) / 2
+  var result = Math.sqrt(p * (p - a) * (p - b) * (p - c))
+  console.log(result.toFixed(2))
 </script>
 
 <script id="ch0103/18">
@@ -135,24 +144,24 @@
   var a2 = Number(prompt(""))
   var n = Number(prompt(""))
   var an = a1 + (n - 1) * (a2 - a1)
-  alert(an)
+  console.log(an)
 </script>
 
 <script id="ch0103/19">
   var A = Number(prompt(""))
   var B = Number(prompt(""))
   var result = A * B
-  alert(result)
+  console.log(result)
 </script>
 
 <script id="ch0103/20">
   var n = Number(prompt(""))
-  var result = Math.pow(2,n)
+  var result = Math.pow(2, n)
   console.log(result)
 </script>
 
 <script id="ch0104/01" type="">
-  var N = Number(prompt("一个整数N",""))
+  var N = Number(prompt())
   if (N > 0) {
     console.log(positive)
   } else if (N == 0) {
