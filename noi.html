@@ -42,7 +42,6 @@
   var a = Number(prompt())
   var b = Number(prompt())
   var c = Number(prompt())
-  var d = Number(prompt())
   var x = Number(prompt())
   result = a * x * x * x + b * x * x + c * x + d
   alert(result.toFixed(7))
@@ -57,16 +56,18 @@
 <script id="ch0103/09">
   var r = Number(prompt("r"))
   var a = 2 * r
-  var b = a * Pi
+  var b = 2 * r * Pi
   var c = pi * r * r
-  alert((a,b,c))
+  alert(a)
+  alert(b)
+  alert(c)
 </script>
 
 <script id="ch0103/10">
   var r1 = Number(prompt(""))
   var r2 = Number(prompt(""))
-  var R = 1 / (1 / r1 + 1 / r2)
-  alert(R)
+  result = 1 / (1 / r1 + 1 / r2)
+  console.log(result)
 </script>
 
 <script id="ch0103/11">
