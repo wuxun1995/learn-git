@@ -35,7 +35,7 @@
 <script id="ch0103/06">
   var b = Number(prompt(""))
   var a = Number(prompt(""))
-  alert(a / b * 100).toFixed(3) + %)
+  alert((a / b * 100).toFixed(3) + %)
 </script>
 
 <script id="ch0103/07">
@@ -43,37 +43,39 @@
   var b = Number(prompt())
   var c = Number(prompt())
   var x = Number(prompt())
-  result = a * x * x * x + b * x * x + c * x + d
+  var d = Number(prompt())
+  var result = a * x * x * x + b * x * x + c * x + d
   alert(result.toFixed(7))
 </script>
 
 <script id="ch0103/08">
-  var F = NumCber(prompt(""))
+  var F = Number(prompt('F'))
   var C = 5 * (F - 32) / 9
   alert(C.toFixed(5))
 </script>
 
 <script id="ch0103/09">
-  var r = Number(prompt("r"))
-  var a = 2 * r
-  var b = 2 * r * Pi
-  var c = pi * r * r
-  alert(a)
-  alert(b)
-  alert(c)
+  var r = Number(prompt('r'))
+  var pi = 3.14159
+  var diameter = 2 * r
+  var L = 2 * r * Pi
+  var S = pi * r * r
+  alert(diameter.toFixed(4))
+  alert(L.toFixed(4))
+  alert(S.toFixed(4))
 </script>
 
 <script id="ch0103/10">
   var r1 = Number(prompt(""))
   var r2 = Number(prompt(""))
-  result = 1 / (1 / r1 + 1 / r2)
-  console.log(result)
+  var result = 1 / (1 / r1 + 1 / r2)
+  console.log(result.toFixed(2))
 </script>
 
 <script id="ch0103/11">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
-  result = a % b
+  var result = a % b
   console.log(result.toFixed(4))
 </script>
 
