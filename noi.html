@@ -63,9 +63,7 @@
   var diameter = 2 * r
   var L = 2 * Pi * r
   var A = pi * r * r
-  console.log(diameter.toFixed(4))
-  console.log(L.toFixed(4))
-  console.log(A.toFixed(4))
+  console.log(diameter.toFixed(4),L.toFixed(4),A.toFixed(4))
 </script>
 
 <script id="ch0103/10">
@@ -117,12 +115,12 @@
 
 <script id="ch0103/16">
   var x1 = Number(prompt())
-  var x2 = Number(prompt())
   var y1 = Number(prompt())
+  var x2 = Number(prompt())
   var y2 = Number(prompt())
-  var dx = x1 - x2
-  var dy = y1 - y2
-  var result = Math.sqrt(dx * dx + dy * dy)
+  var a = x1 - x2
+  var b = y1 - y2
+  var result = Math.sqrt(a * a + b * b)
   console.log(result.toFixed(3))
 </script>
 
