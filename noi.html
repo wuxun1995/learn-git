@@ -320,10 +320,10 @@
       if ((a - 1000) % 500 == 0) {
       var result = 8 + 5 + (a - 1000) / 500 * 4
       console.log(result)
-      } else if ((a - 1000) % 500 !== 0) {
+    } else if ((a - 1000) % 500 !== 0) {
         var result = 8 + 5 + (a - 1000) / 500 * 4 + 4
         console.log(result)
-      }
+    }
   } else if(a > 1000 && b == 'n') {
       if ((a - 1000) % 500 == 0) {
       var result = 8 + (a - 1000) / 500 * 4
@@ -379,7 +379,7 @@
   }
 </script>
 
-<script id="ch0104/19" type="">
+<script id="ch0104/19" type="xx">
   var a = Number(prompt())
   var b = Number(prompt())
   var op = prompt()
@@ -400,7 +400,7 @@
   }
 </script>
 
-<script id="ch0104/20" type="">
+<script id="ch0104/20" type="xx">
   var a = parseInt(prompt('a:'))
   var b = parseInt(prompt('b:'))
   var c = parseInt(prompt('c:'))
@@ -424,4 +424,40 @@
   var y = Number(prompt())
   result =n - Math.ceil(1 / x * y )
   alert(result)
+</script>
+
+<script id="ch0105/01" type="xx">
+  var n = Number(prompt())
+  var counter = 0
+  while (counter < n) {
+    var age = Number(prompt())
+    var agesum = age + agesum
+    counter = counter + 1
+  }
+  var pingjunage = agesum / n
+  console.log(pingjunage.toFixed(2))
+</script>
+
+<script id="ch0105/02" type="xx">
+  var n = Number(prompt())
+  var counter = 0
+  while (counter <= n) {
+    var jieyu = Number(prompt())
+    var zongjieyu = jieyu + zongjieyu
+    counter = counter + 1
+  }
+  var pingjieyu = zongjieyu / n
+  console.log('$' + pingjieyu.toFixed(2))
+</script>
+
+<script id="ch0105/03" xtype="xx">
+  var n = Number(prompt())
+  var counter = 0
+  while (counter <= n) {
+    var yangben = Number(prompt())
+    var yangbenSum = yangben + yangbenSum
+    counter = counter + 1
+  }
+  var average = yangbenSum / n
+  console.log(average.toFixed(4))
 </script>
