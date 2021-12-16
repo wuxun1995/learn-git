@@ -4,12 +4,12 @@
   console.log(a + b)
 </script>
 
-<script id="ch0103/02" type="xx">
-  var c = Number(prompt(""))
-  var a = Number(prompt(""))
-  var b = Number(prompt(""))
-  var c = Number(prompt(""))
-   console.log((a + b) * c)
+<script id="ch0103/02">
+  var a = Number(prompt())
+  var b = Number(prompt())
+  var c = Number(prompt())
+  var result = (a + b) * c
+   console.log(result)
 </script>
 
 <script id="ch0103/03">
@@ -185,7 +185,7 @@
 </script>
 
 <script id="ch0104/03" type="">
-  var N = Number(prompt("一个大于零的正整数n",""))
+  var N = Number(prompt(())
   if (N % 2 == 0) {
       console.log(even)
   } else if (N % 2 !== 0) {
@@ -193,19 +193,24 @@
   }
 </script>
 
-<script id="ch0104/04" type="">
-  var N = Number(prompt())
-  ().charCodeAt()
+<script id="ch0104/04">
+  var n = prompt()
+  var code = n.charCodeAt(0)
+  if (code % 2 == 1) {
+    console.log(YES)
+  } else {
+    console.log(NO)
+  }
 </script>
 
 <script id="ch0104/05" type="">
   var x = Number(prompt())
   var y = Number(prompt())
-  if (x > y) {
+  if (x - y > 0) {
     console.log(>)
-  } else if (x == y) {
+  } else if (x - y == 0) {
     console.log(=)
-  } else if (x < y) {
+  } else if (x - y < 0) {
     console.log(<)
   }
 </script>
@@ -231,7 +236,7 @@
 
 <script id="ch0104/08" type="">
   var n = Number(prompt())
-  if (n % 3 ==0 && n % 5 == 0) {
+  if (n % 3 == 0 && n % 5 == 0) {
     console.log(YES)
   } else {
     console.log(NO)
