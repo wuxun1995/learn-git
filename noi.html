@@ -283,13 +283,12 @@
 
 <script id="ch0104/12" type="xx">
   var a = Number(prompt())
-  var biketime = 27 + 23 + a / 3
-  var walktime = a / 1.2
-  if (biketime > walktime) {
+  var result = 27 + 23 + a / 3 - a / 1.2
+  if (result > 0) {
     console.log("Bike")
-  } else if (biketime < walktime) {
+  } else if (result < 0) {
     console.log("Walk")
-  } else if (biketime == walktime) {
+  } else if (result == 0) {
     console.log("All")
   }
 </script>
@@ -309,16 +308,15 @@
 </script>
 
 <script id="ch0104/14" type="xx">
-  var a = Number(prompt())
-  var b = y
-  var b = n
-  if (a <= 1000 && b == y) {
+  var a = Number(prompt('a:'))
+  var b = prompt()
+  if (a <= 1000 && b == 'y') {
     var result = 8 + 5
     console.log(result)
-  } else if(a <= 1000 && b == n) {
+  } else if(a <= 1000 && b == 'n') {
     var result = 8
     console.log(reult)
-  } else if (a > 1000 && b == y) {
+  } else if (a > 1000 && b == 'y') {
     if ((a - 1000) % 500 == 0) {
       var result = 8 + 5 + (a - 1000) / 500 * 4
       console.log(result)
@@ -326,12 +324,12 @@
       var result = 8 + 5 + (a - 1000) / 500 * 4 + 4
       console.log(result)
     }
-  } else if(a > 1000 && b == n) {
+  } else if(a > 1000 && b == 'n') {
     if ((a - 1000) % 500 == 0) {
       var result = 8 + (a - 1000) / 500 * 4
       console.log(result)
     } else if ((a - 1000) % 500 !== 0) {
-      var result = 8 + 5 + (a - 1000) / 500 * 4 + 4
+      var result = 8 + 5 + Math.floor((a - 1000) / 500) * 4 + 4
       console.log(result)
     }
   }
@@ -385,7 +383,7 @@
   }
 </script>
 
-<script id="ch0104/20" type="">
+<script id="ch0104/20" type="xx">
   var a = parseInt(prompt('a:'))
   var b = parseInt(prompt('b:'))
   var c = parseInt(prompt('c:'))
