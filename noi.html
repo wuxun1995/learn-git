@@ -183,7 +183,7 @@
 </script>
 
 <script id="ch0104/03" type="xx">
-  var N = Number(prompt(())
+  var N = Number(prompt())
   if (N % 2 !== 0) {
       console.log("odd")
   } else if (N % 2 == 0) {
@@ -205,11 +205,11 @@
   var x = Number(prompt())
   var y = Number(prompt())
   if (x - y > 0) {
-    console.log(>)
+    console.log(">")
   } else if (x - y == 0) {
-    console.log(=)
+    console.log("=")
   } else if (x - y < 0) {
-    console.log(<)
+    console.log("<")
   }
 </script>
 
@@ -283,7 +283,7 @@
 
 <script id="ch0104/12" type="xx">
   var a = Number(prompt())
-  var biketime = 27 + 23 + (a - 1.2 * 27) / 3
+  var biketime = 27 + 23 + a / 3
   var walktime = a / 1.2
   if (biketime > walktime) {
     console.log("Bike")
@@ -310,7 +310,8 @@
 
 <script id="ch0104/14" type="xx">
   var a = Number(prompt())
-  var b = prompt()
+  var b = y
+  var b = n
   if (a <= 1000 && b == y) {
     var result = 8 + 5
     console.log(result)
@@ -377,17 +378,14 @@
   var a = Number(prompt())
   var b = Number(prompt())
   var c = prompt()
-  if (b !== 0 && (c == + || c == - || c == * || c == /)) {
-    var result = a / b
-    console.log(result)
-  } else if (b == 0) {
+  if (b == 0) {
     console.log("Divided by zero")
-  } else if (c !== + && c !== - && c !== * && c !== /) {
+  } else if ((c !== +) && (c !== -) && (c !== *) && (c !== /)) {
     console.log("Invalid operator")
   }
 </script>
 
-<script id="ch0104/20" type="xx">
+<script id="ch0104/20" type="">
   var a = parseInt(prompt('a:'))
   var b = parseInt(prompt('b:'))
   var c = parseInt(prompt('c:'))
