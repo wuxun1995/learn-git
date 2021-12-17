@@ -426,43 +426,47 @@
 <script id="ch0105/01" type="xx">
   var n = Number(prompt())
   var counter = 0
+  var agesum = 0
   while (counter < n) {
     var age = Number(prompt())
     var agesum = age + agesum
     counter = counter + 1
   }
-  var pingjunage = agesum / n
-  console.log(pingjunage.toFixed(2))
+  var average = agesum / n
+  console.log(average.toFixed(2))
 </script>
 
 <script id="ch0105/02" type="xx">
   var n = Number(prompt())
   var counter = 0
-  while (counter <= n) {
-    var jieyu = Number(prompt())
-    var zongjieyu = jieyu + zongjieyu
+  var aggregate = 0
+  while (counter < n) {
+    var balance= Number(prompt())
+    var aggregate = balance + aggregate
     counter = counter + 1
   }
-  var pingjieyu = zongjieyu / n
-  console.log('$' + pingjieyu.toFixed(2))
+  var average = aggregate / n
+  console.log('$' + average.toFixed(2))
 </script>
 
-<script id="ch0105/03" xtype="xx">
+<script id="ch0105/03" type="xx">
   var n = Number(prompt())
   var counter = 0
-  while (counter <= n) {
-    var yangben = Number(prompt())
-    var yangbenSum = yangben + yangbenSum
+  var sampleSum = 0
+  while (counter < n) {
+    var sample = Number(prompt())
+    var sampleSum = sample + sampleSum
     counter = counter + 1
   }
-  var average = yangbenSum / n
+  var average = sampleSum / n
   console.log(average.toFixed(4))
 </script>
 
 <script id="ch0105/04" type="xx">
   var n = Number(prompt())
   var counter = 0
-  while (counter <= n) {
+  var sum = 0
+  while (counter < n) {
     var a = Number(prompt())
     var Sum = a + Sum
     counter = counter + 1
@@ -474,26 +478,23 @@
 <script id="ch0105/05" type="xx">
   var n = Number(prompt())
   var counter = 0
-  while (counter <= n) {
+  var max = 0
+  while (counter < n) {
     var score = Number(prompt())
-    var max = score
-    if (score > max) {
-      console.log(score)
+    if (score >= max) {
+      var max = score
     } else {
-      console.log(max)
+      max = max
     }
     counter = counter + 1
   }
+  console.log(max)
 </script>
 
 <script id="ch0105/06" type="xx">
   var n = Number(prompt())
   var counter = 0
-  while (counter <= n) {
-    var yangben = Number(prompt())
-    var yangbenSum = yangben + yangbenSum
-    counter = counter + 1
+  while (counter < n) {
+
   }
-  var average = yangbenSum / n
-  console.log(average.toFixed(4))
 </script>
