@@ -439,10 +439,10 @@
 <script id="ch0105/02" type="xx">
   var count = 0
   var aggregate = 0
-  while (counter < 12) {
+  while (count < 12) {
     var balance= Number(prompt())
     var aggregate = balance + aggregate
-    counter = counter + 1
+    count = count + 1
   }
   var average = aggregate / n
   console.log('$' + average.toFixed(2))
@@ -471,7 +471,7 @@
     counter = counter + 1
   }
   var average = Sum / n
-  console.log(Sum + + average.toFixed(5))
+  console.log(Sum, average.toFixed(5))
 </script>
 
 <script id="ch0105/05" type="xx">
@@ -501,7 +501,7 @@
       max = a
     }
     if (a < min) {
-      min = b
+      min = a
     }
     counter = counter + 1
   }
@@ -522,6 +522,7 @@
     var jinsum = jin + jinsum
     var yinsum = yin + yinsum
     var tongsum = tong + tongsum
+    counter = counter + 1
   }
   var result = jinsum + yinsum + tongsum
   console.log(jinsum + + yinsum + + tongsum + + result)
