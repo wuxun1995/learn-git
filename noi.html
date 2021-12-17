@@ -285,9 +285,9 @@
   var a = Number(prompt())
   var result = 27 + 23 + a / 3 - a / 1.2
   if (result > 0) {
-    console.log("Bike")
-  } else if (result < 0) {
     console.log("Walk")
+  } else if (result < 0) {
+    console.log("Bike")
   } else if (result == 0) {
     console.log("All")
   }
@@ -316,23 +316,20 @@
   } else if(a <= 1000 && b == 'n') {
     var result = 8
     console.log(reult)
-  } else if (a > 1000 && b == 'y') {
-      if ((a - 1000) % 500 == 0) {
-      var result = 8 + 5 + (a - 1000) / 500 * 4
-      console.log(result)
-    } else if ((a - 1000) % 500 !== 0) {
-        var result = 8 + 5 + (a - 1000) / 500 * 4 + 4
-        console.log(result)
-    }
-  } else if(a > 1000 && b == 'n') {
-      if ((a - 1000) % 500 == 0) {
-      var result = 8 + (a - 1000) / 500 * 4
-      console.log(result)
-    } else if ((a - 1000) % 500 !== 0) {
-      var result = 8 + 5 + Math.floor((a - 1000) / 500) * 4 + 4
-      console.log(result)
-    }
+  } else if ((a - 1000 <= 500 && a > 1000)&& b == 'y') {
+    var result = 8 + 5 + 4
+    console.log(result)
+  } else if ((a - 1000 < 500 && a > 1000)&& b == 'n') {
+    var result = 8 + 4
+    console.log(result)
+  } else if(a - 1000 > 500 && b == 'y') {
+    var result = 8 + 5 + Math.ceil((a - 1000) / 500) * 4
+    console.log(result)
+  } else if (a - 1000 > 500 && b == 'n') {
+    var result = 8 + Math.ceil((a - 1000) / 500) * 4
+    console.log(result)
   }
+
 </script>
 
 <script id="ch0104/15" type="xx">
@@ -344,8 +341,8 @@
     console.log(b)
   } else if (c > max) {
     console.log(c)
-  } else if (a = max) {
-    console.log(a)
+  } else {
+    console.log(max)
   }
 </script>
 
