@@ -465,14 +465,14 @@
 <script id="ch0105/04" type="xx">
   var n = Number(prompt())
   var counter = 0
-  var sum = 0
+  var Sum = 0
   while (counter < n) {
     var a = Number(prompt())
     var Sum = a + Sum
     counter = counter + 1
   }
   var average = Sum / n
-  console.log(Sum.toFixed(4) + ';' + average.toFixed(4))
+  console.log(Sum.toFixed(5) + ';' + average.toFixed(5))
 </script>
 
 <script id="ch0105/05" type="xx">
@@ -494,7 +494,26 @@
 <script id="ch0105/06" type="xx">
   var n = Number(prompt())
   var counter = 0
+  var min = infinity
+  var max = -infinity
   while (counter < n) {
-
+    var a = Number(prompt())
+    if (a > max) {
+      var max = a
+    } else {
+      var max = max
+    }
+    counter = counter + 1
   }
+  while (counter < n) {
+    var b = Number(prompt())
+    if (b < min) {
+      var min = b
+    } else {
+      var min = min
+    }
+    counter = counter + 1
+  }
+  var result = max - min
+  console.log(result)
 </script>
