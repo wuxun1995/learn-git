@@ -437,10 +437,9 @@
 </script>
 
 <script id="ch0105/02" type="xx">
-  var n = Number(prompt())
-  var counter = 0
+  var count = 0
   var aggregate = 0
-  while (counter < n) {
+  while (counter < 12) {
     var balance= Number(prompt())
     var aggregate = balance + aggregate
     counter = counter + 1
@@ -472,7 +471,7 @@
     counter = counter + 1
   }
   var average = Sum / n
-  console.log(Sum.toFixed(5) + ';' + average.toFixed(5))
+  console.log(Sum + + average.toFixed(5))
 </script>
 
 <script id="ch0105/05" type="xx">
@@ -494,26 +493,36 @@
 <script id="ch0105/06" type="xx">
   var n = Number(prompt())
   var counter = 0
-  var min = infinity
-  var max = -infinity
+  var min = 1000
+  var max = 0
   while (counter < n) {
     var a = Number(prompt())
     if (a > max) {
-      var max = a
-    } else {
-      var max = max
+      max = a
     }
-    counter = counter + 1
-  }
-  while (counter < n) {
-    var b = Number(prompt())
-    if (b < min) {
-      var min = b
-    } else {
-      var min = min
+    if (a < min) {
+      min = b
     }
     counter = counter + 1
   }
   var result = max - min
   console.log(result)
+</script>
+
+<script id="ch0105/07" type="xx">
+  var n = Number(prompt())
+  var jinsum = 0
+  var yinsum = 0
+  var tongsum = 0
+  var counter = 0
+  while (counter < n) {
+    var jin = Number(prompt())
+    var yin = Number(prompt())
+    var tong = Number(prompt())
+    var jinsum = jin + jinsum
+    var yinsum = yin + yinsum
+    var tongsum = tong + tongsum
+  }
+  var result = jinsum + yinsum + tongsum
+  console.log(jinsum + + yinsum + + tongsum + + result)
 </script>
