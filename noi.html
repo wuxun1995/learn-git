@@ -537,3 +537,114 @@
   var result = jinsum + yinsum + tongsum
   console.log(jinsum, yinsum, tongsum, result)
 </script>
+
+<script id="ch0105/08" type="xx">
+  var n = Number(prompt())
+  var counter = 0
+  var sum = (n - 2) * 180
+  var anglesum = 0
+  while (counter < n-1) {
+    var angle = Number(prompt())
+    var anglesum = angle + anglesum
+    counter = counter + 1
+  }
+  var result = sum - anglesum
+  console.log(result)
+</script>
+
+<script id="ch0105/09" type="xx">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var counter = 0
+  var sum = 0
+  if (m % 2 !== 0 && n % 2 !== 0){
+    while (counter < (n - m) / 2 + 1) {
+      var sum = m + sum
+      var m = MathMLElement + 2
+      counter = counter + 1
+    }
+  }
+  if (m % 2 !== 0 && n % 2 == 0){
+    while (counter < (n - m + 1) / 2) {
+      var sum = m + sum
+      var m = m + 2
+      counter = counter + 1
+    }
+  }
+  if (m % 2 == 0 && n % 2 !== 0){
+    var m = m + 1
+    while (counter < (n - m + 1) / 2) {
+      var sum = odd + sum
+      var m = m + 2
+      counter = counter + 1
+    }
+  }
+  if (m % 2 == 0 && n % 2 == 0){
+    var m = m + 1
+    while (counter < (n - m) / 2) {
+      var sum = m + sum
+      var m = m + 2
+      counter = counter + 1
+    }
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/10" type="xx">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var counter = 0
+  var integer = 0
+  var sum = 0
+  while (counter < n - m + 1) {
+    var integer = 17 * counter
+    if (integer >= m && integer <= n) {
+      var sum = integer + sum
+    }
+    var counter = counter + 1
+  }
+  console.log(sum)
+</script>
+
+<script id="ch0105/11" type="xx">
+  var k = Number(prompt())
+  var counter = 0
+  var result1 = 0
+  var result5 = 0
+  var result10 = 0
+  while (counter < k) {
+    var x = Number(prompt())
+    if (x == 1) {
+      var result1 = result1 + 1
+    }
+    if (x == 5) {
+      var result5 = result5 + 1
+    }
+    if (x == 10) {
+      var result10 = result10 + 1
+    }
+    counter = counter + 1
+  }
+  console.log(result1)
+  console.log(result5)
+  console.log(result10)
+</script>
+
+<script id="ch0105/12" xtype="xx">
+  var N = Number(prompt())
+  var m = Number(prompt())
+  var counter = 0
+  var times = 0
+  while (counter < N) {
+    var n = Number(prompt())
+    if (n = m) {
+      times = times + 1
+    }
+    counter = counter + 1
+  }
+  console.log(times)
+</script>
+<script id="ch0105/09" type="xx"></script>
+<script id="ch0105/09" type="xx"></script>
+<script id="ch0105/09" type="xx"></script>
+<script id="ch0105/09" type="xx"></script>
