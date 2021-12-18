@@ -338,12 +338,12 @@
   var c = Number(prompt())
   var max = a
   if (b > max) {
-    console.log(b)
-  } else if (c > max) {
-    console.log(c)
-  } else {
-    console.log(max)
+    man = b
   }
+  if (c > max) {
+    max = c
+  }
+  console.log(max)
 </script>
 
 <script id="ch0104/16" type="xx">
@@ -403,7 +403,17 @@
   var c = parseInt(prompt('c:'))
   var delta = b * b - 4 * a * c
   if (delta < 0){
-    console.log('无解')
+    var sDelta = Math.sqrt(-delta)
+    var m1 = -b / 2 / a
+    var m2 = sDelta / 2 / a
+    if (m2 < 0) {
+      var x1 = m1 + '-' + m2.toFixed(5) + 'i'
+      var x2 = m1 + m2.toFixed(5) + 'i'
+    } else {
+      var x1 = m1 + '+' +m2.toFixed(5) + 'i'
+      var x1 = m1 + '-' +m2.toFixed(5) + 'i'
+    }
+    console.log('x1=' + x1 + ';x2=' + x2)
   } else if (delta == 0) {
     var x = (-b) / (2 * a)
     console.log('x1=x2=' + x.toFixed(5))
@@ -444,7 +454,7 @@
     var aggregate = balance + aggregate
     count = count + 1
   }
-  var average = aggregate / n
+  var average = aggregate / 12
   console.log('$' + average.toFixed(2))
 </script>
 
@@ -525,5 +535,5 @@
     counter = counter + 1
   }
   var result = jinsum + yinsum + tongsum
-  console.log(jinsum + + yinsum + + tongsum + + result)
+  console.log(jinsum, yinsum, tongsum, result)
 </script>
