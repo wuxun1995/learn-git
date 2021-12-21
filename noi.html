@@ -868,68 +868,22 @@
 <script id="ch0105/29" type="xx">
   var n = Number(prompt())
   var sum = n % 10
-  if (n > 0 && sum !== 0) {
-    for (var i = 0; i < Infinity; i++) {
-      var a = Math.trunc(n / Math.pow(10, (i + 1)))
-      var a1 = a % 10
-      var sum = String(sum) + String(a1)
-      console.log(sum)
-      if (a < 10) {
-        break
-      }
-    }
+  if (n > 0) {
+    var n = n
+    var sign = 1
   }
-  if (n > 0 && sum == 0) {
-    for (j = 0; j < Infinity; j++) {
-      var n = n / 10
-      var sum = n % 10
-      if (sum !== 0) {
-        break
-      }
-    }
-    for (var i = 0; i < Infinity; i++) {
-      var a = Math.trunc(n / Math.pow(10, (i + 1)))
-      var a1 = a % 10
-      var sum = String(sum) + String(a1)
-      console.log(sum)
-      if (a < 10) {
-        break
-      }
-    }
-  }
-  if (n < 0 && sum !== 0) {
+  if (n < 0) {
     var n = -n
-    var sign = '-'
-    for (var i = 0; i < Infinity; i++) {
-      var a = Math.trunc(n / Math.pow(10, (i + 1)))
-      var a1 = a % 10
-      var sum = String(sum) + String(a1)
-      console.log('sign' + sum)
-      if (a < 10) {
-        break
-      }
+    var sign = -1
+  }
+  for (var i = -1; i < Infinity; i++) {
+    var a = Math.trunc(n / Math.pow(10, i+1))
+    var a1 = a % 10
+    if (a1 < 1) {
+      break
     }
   }
-  if (n < 0 && sum == 0) {
-    var n = -n
-    var sign = '-'
-    for (j = 0; j < Infinity; j++) {
-      var n = n / 10
-      var sum = n % 10
-      if (sum !== 0) {
-        break
-      }
-    }
-    for (var i = 0; i < Infinity; i++) {
-      var a = Math.trunc(n / Math.pow(10, (i + 1)))
-      var a1 = a % 10
-      var sum = String(sum) + String(a1)
-      console.log('sign' + sum)
-      if (a < 10) {
-        break
-      }
-    }
-  }
+  console.log(sign * sum)
 </script>
 
 <script id="ch0105/30" type="xx">
@@ -1116,7 +1070,7 @@
   console.log(count)
 </script>
 
-<script id="ch0105/42" type="xx">
+<script id="ch0105/42" xtype="xx">
   var height = Number(prompt())
   var width = Number(prompt())
   var character = prompt()
@@ -1148,7 +1102,7 @@
     if (a == 1) {
       b = character
       for (var j = 1; j < width; j++) {
-        b = b + ' ' + character
+        b = b + character
       }
       console.log(b)
     }
