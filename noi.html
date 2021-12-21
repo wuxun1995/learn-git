@@ -868,20 +868,66 @@
 <script id="ch0105/29" type="xx">
   var n = Number(prompt())
   var sum = n % 10
-  if (n > 0) {
-    n = n
-    sign = 1
+  if (n > 0 && sum !== 0) {
+    for (var i = 0; i < Infinity; i++) {
+      var a = Math.trunc(n / Math.pow(10, (i + 1)))
+      var a1 = a % 10
+      var sum = String(sum) + String(a1)
+      console.log(sum)
+      if (a < 10) {
+        break
+      }
+    }
   }
-  if {
-    n = -n
-    sign = -1
+  if (n > 0 && sum == 0) {
+    for (j = 0; j < Infinity; j++) {
+      var n = n / 10
+      var sum = n % 10
+      if (sum !== 0) {
+        break
+      }
+    }
+    for (var i = 0; i < Infinity; i++) {
+      var a = Math.trunc(n / Math.pow(10, (i + 1)))
+      var a1 = a % 10
+      var sum = String(sum) + String(a1)
+      console.log(sum)
+      if (a < 10) {
+        break
+      }
+    }
   }
-  for (var i = 0; i < Infinity; i++) {
-    var a1 = Math.trunc(n / Math.pow(10, (i + 1))) % 10
-    var sum = String(sum) + String(a1)
-    console.log(sum)
-    if (Math.trunc(n / Math.pow(10, (i + 1))) < 10) {
-      break
+  if (n < 0 && sum !== 0) {
+    var n = -n
+    var sign = '-'
+    for (var i = 0; i < Infinity; i++) {
+      var a = Math.trunc(n / Math.pow(10, (i + 1)))
+      var a1 = a % 10
+      var sum = String(sum) + String(a1)
+      console.log('sign' + sum)
+      if (a < 10) {
+        break
+      }
+    }
+  }
+  if (n < 0 && sum == 0) {
+    var n = -n
+    var sign = '-'
+    for (j = 0; j < Infinity; j++) {
+      var n = n / 10
+      var sum = n % 10
+      if (sum !== 0) {
+        break
+      }
+    }
+    for (var i = 0; i < Infinity; i++) {
+      var a = Math.trunc(n / Math.pow(10, (i + 1)))
+      var a1 = a % 10
+      var sum = String(sum) + String(a1)
+      console.log('sign' + sum)
+      if (a < 10) {
+        break
+      }
     }
   }
 </script>
@@ -1009,9 +1055,10 @@
       console.log(0)
     } else {
       for (var j = a; j >= 0; j--) {
-      var C = Number(prompt())
-      if (j !== 0) {
-        console.log(C * j)
+        var C = Number(prompt())
+        if (j !== 0) {
+          console.log(C * j)
+        }
       }
     }
   }
@@ -1099,13 +1146,11 @@
       }
     }
     if (a == 1) {
-      if (i <= height) {
-        b = character
-        for (j = 2; j <= width; j++) {
-          b = b + ' ' + character
-        }
-        console.log(b)
+      b = character
+      for (var j = 1; j < width; j++) {
+        b = b + ' ' + character
       }
+      console.log(b)
     }
   }
 </script>
