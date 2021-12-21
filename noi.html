@@ -1080,21 +1080,21 @@
       if (i == 1) {
         b = character
         for (j = 2; j <= width; j++) {
-          b = b + ' ' + character
+          b = b + character
         }
         console.log(b)
       }
       if (i > 1 && i < height) {
-        b = '  '
-        for (j = 5; j <= width; j++) {
-          b = b + '  '
+        b = ' '
+        for (j = 2; j < width; j++) {
+          b = b + ' '
         }
-        console.log(character + ' ' + b + ' ' + character)
+        console.log(character + b + character)
       }
       if (i == height) {
         b = character
         for (j = 2; j <= width; j++) {
-          b = b + ' ' + character
+          b = b + character
         }
         console.log(b)
       }
