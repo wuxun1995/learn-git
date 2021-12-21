@@ -909,10 +909,29 @@
 <script id="ch0105/31" type="xx">
   var n = Number(prompt())
   var m = Number(prompt())
-
+  var isFirst = true
+  var lights = ''
+  for (var i = 1; i <= n; i++) {
+    var light = true
+    for (var j = 1; j <= m && j <= i; j++) {
+      if (i % j == 0) {
+        light = !light
+      }
+    }
+    if (!light) {
+      if (isFirst) {
+        lights += i
+      } else {
+        lights += ',' + i
+      }
+      isFirst = false
+    }
+  }
+  console.log(lights)
 </script>
 
 <script id="ch0105/32" type="xx">
+  var n = Number(prompt())
   var sum = 2
   var a1 = 1
   var a2 = 2
@@ -981,7 +1000,22 @@
   var
 </script>
 
-<script id="ch0105/38" type="xx"></script>
+<script id="ch0105/38" type="xx">
+  var n = Number(prompt())
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt())
+    if (a == 0) {
+      var C = Number(prompt())
+      console.log(0)
+    } else {
+      for (var j = a; j >= 0; j--) {
+      var C = Number(prompt())
+      if (j !== 0) {
+        console.log(C * j)
+      }
+    }
+  }
+</script>
 
 <script id="ch0105/39" type="xx">
   var n = Number(prompt())
@@ -996,12 +1030,44 @@
   console.log(sum)
 </script>
 
-<script id="ch0105/40" xtype="xx">
+<script id="ch0105/40" type="xx">
   var n = Number(prompt())
-
+  var count = 0
+  for (var i = n; i > 0; i--) {
+    var a = i
+    for (var j = -1; j < Infinity; j++) {
+      var a1 = Math.trunc(a / Math.pow(10, j + 1))
+      var a2 = a1 % 10
+      if (a2 == 1) {
+        count += 1
+      }
+      if (a1 == 0) {
+        break
+      }
+    }
+  }
+  console.log(count)
 </script>
 
-<script id="ch0105/41" type="xx"></script>
+<script id="ch0105/41" xtype="xx">
+  var L = Number(prompt())
+  var R = Number(prompt())
+  var count = 0
+  for (var i = R; i >= L; i--) {
+    var a = i
+    for (var j = -1; j < Infinity; j++) {
+      var a1 = Math.trunc(a / Math.pow(10, j + 1))
+      var a2 = a1 % 10
+      if (a2 == 2) {
+        count += 1
+      }
+      if (a1 == 0) {
+        break
+      }
+    }
+  }
+  console.log(count)
+</script>
 
 <script id="ch0105/42" type="xx"></script>
 
