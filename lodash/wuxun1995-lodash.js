@@ -1,6 +1,6 @@
 <script>
-  var wuxun1995 = function () {
-    function chunk(array, size) {
+  var wuxun1995 = {
+    chunk: function (array, size) {
       var array = []
       var newarray = []
       for (var i = 1; i <= array.length; i++) {
