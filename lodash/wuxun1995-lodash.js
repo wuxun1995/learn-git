@@ -1,20 +1,12 @@
-
 var wuxun1995 = {
   chunk: function (array, size) {
-    var array = []
-    var newarray = []
-    for (var i = 1; i <= array.length; i++) {
-      newarray.push(array[i - 1])
-      if (i % size == 0) {
-        array.push(newarray)
-        newarray.push = []
+    let newarray = []
+    for (var i = 0; i < array.length; i++) {
+      let array1 = []
+      for (var j = 0; j < size; j++) {
+        array1.push(array[i])
       }
+      newarray.push(array1)
     }
-    if (array.length) {
-      array.push(newarray)
-    }
-    return array
-  }
+    return newarray
 }
-
-
