@@ -21,7 +21,7 @@ var wuxun1995 = {
   compact: function (array) {
     let newArray = []
     for (i = 0; i < array.length; i++) {
-      if (array[i] == false || array[i] == null || array[i] == 0 || array[i] == "" || array[i] == undefined || array[i] == NaN) {
+      if (array[i] == false || array[i] == null || array[i] == 0 || array[i] == "" || array[i] == undefined || Number.isNaN(array[i])) {
         newArray.push()
       } else {
         newArray.push(array[i])
@@ -31,12 +31,19 @@ var wuxun1995 = {
   },
 
   difference: function (array, [values]) {
+    let result = []
+    let values = [values]
     for (i = 0; i < array.length; i++) {
-      result = []
-      for (j = 0; j < [values].length; j++) {
-        if (array[i] !== [values][j]) {
-          result.push(array[i])
+      condition = false
+      for (j = 0; j < values.length; j++) {
+        for (k = 0; k < values[j].length; k++) {
+          if (array[i] == values[j][k]) {
+            condition = true
+          }
         }
+      }
+      if (!condition) {
+        result.push(array[i])
       }
     }
     return result
