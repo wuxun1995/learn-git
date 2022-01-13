@@ -3,7 +3,7 @@ var wuxun1995 = {
     let newarray = []             // 如果array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
     let n = 0
     let array1 = []
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       array1.push(array[i])
       n++
       if (n == size) {
@@ -20,7 +20,7 @@ var wuxun1995 = {
 
   compact: function (array) { // 创建一个新数组，包含原数组中所有的非假值元素。例如false, null,0, "", undefined, 和 NaN 都是被认为是“假值”。
     let newArray = []
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       if (array[i] == false || array[i] == null || array[i] == 0 || array[i] == "" || array[i] == undefined || Number.isNaN(array[i])) {
         newArray.push()
       } else {
@@ -32,10 +32,10 @@ var wuxun1995 = {
 
   difference: function (array, ...values) {
     let result = []
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       condition = false
-      for (j = 0; j < values.length; j++) {
-        for (k = 0; k < values[j].length; k++) {
+      for (let j = 0; j < values.length; j++) {
+        for (let k = 0; k < values[j].length; k++) {
           if (array[i] == values[j][k]) {
             condition = true
           }
@@ -51,9 +51,9 @@ var wuxun1995 = {
   differenceBy: function (array, [values], [iteratee = _.identity]) {
     arr = [iteratee = _.identity](array)
     val = [iteratee = _.identity]([values])
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       result = []
-      for (j = 0; j < [values].length; j++) {
+      for (let j = 0; j < [values].length; j++) {
         if (arr[i] !== val[j]) {
           result.push(array[i])
         }
@@ -99,9 +99,9 @@ var wuxun1995 = {
 
   flatten: function (array) { // 减少一级array嵌套深度。
     let res = []
-    for (i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
       if (array[i].length > 1) {
-        for (j = 0; j < array[i].length; j++) {
+        for (let j = 0; j < array[i].length; j++) {
           res.push(array[i][j])
         }
       } else {
@@ -144,7 +144,7 @@ var wuxun1995 = {
 
   fromPairs: function (pairs) {
     let res = {}
-    for (i = 0; i < pairs.length; i++) {
+    for (let i = 0; i < pairs.length; i++) {
 
       res[pairs[i][0]] = pairs[i][1]
     }
@@ -162,14 +162,14 @@ var wuxun1995 = {
   indexOf: function (array, value, n = 0) { //获取在其中第一次出现的索引value就是在发现array使用SameValueZero的相等比较。如果fromIndex是负数，它被用作从末尾的偏移量array。
     let count = 0
     if (n == 0) {
-      for (i = 0; i < array.length; i++) {
+      for (let i = 0; i < array.length; i++) {
         if (array[i] == value) {
           return i
         }
       }
     }
     if (n > 0) {
-      for (i = 0; i < array.length; i++) {
+      for (let i = 0; i < array.length; i++) {
         if (array[i] == value) {
           count++
           if (count == n) {
@@ -179,7 +179,7 @@ var wuxun1995 = {
       }
     }
     if (n < 0) {
-      for (i = array.length - 1; i >= 0; i--) {
+      for (let i = array.length - 1; i >= 0; i--) {
         if (array[i] == value) {
           count++
           if (count == n) {
@@ -215,10 +215,40 @@ var wuxun1995 = {
   },
 
   last: function (array) {
-    for (i)
-    return array[array.length]
+    for (let i = 0; i < array.length; i++) {
+      return array[array.length - 1]
   }
+  },
 
+  lastIndexOf: function (array, value, n = array.length - 1) {
+    let count = 0
+    for (let i = n; i >= 0; i--) {
+      if (array[i] == value) {
+        return i
+        break
+      }
+    }
+  },
+
+  pull: function (array, ...values) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      if (Array.isArray(values)) {
+        for (let j = 0; j < values.length; j++) {
+          if (array[i] == values[j]) {
+
+          } else {
+            res.push(array[i])
+          }
+        }
+      } else {
+        if (array[i] !== values) {
+          res.push(array[i])
+        }
+      }
+    }
+    return res
+  }
 
 
 
