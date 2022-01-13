@@ -30,9 +30,8 @@ var wuxun1995 = {
     return newArray
   },
 
-  difference: function (array, [values]) {
+  difference: function (array, ...values) {
     let result = []
-    let values = [values]
     for (i = 0; i < array.length; i++) {
       condition = false
       for (j = 0; j < values.length; j++) {
@@ -143,6 +142,82 @@ var wuxun1995 = {
     return res
   },
 
+  fromPairs: function (pairs) {
+    let res = {}
+    for (i = 0; i < pairs.length; i++) {
+
+      res[pairs[i][0]] = pairs[i][1]
+    }
+    return res
+  },
+
+  head: function (array) {
+    if (array.length > 1) {
+      return array[0]
+    } else {
+      return undefined
+    }
+  },
+
+  indexOf: function (array, value, n = 0) { //获取在其中第一次出现的索引value就是在发现array使用SameValueZero的相等比较。如果fromIndex是负数，它被用作从末尾的偏移量array。
+    let count = 0
+    if (n == 0) {
+      for (i = 0; i < array.length; i++) {
+        if (array[i] == value) {
+          return i
+        }
+      }
+    }
+    if (n > 0) {
+      for (i = 0; i < array.length; i++) {
+        if (array[i] == value) {
+          count++
+          if (count == n) {
+            return i
+          }
+        }
+      }
+    }
+    if (n < 0) {
+      for (i = array.length - 1; i >= 0; i--) {
+        if (array[i] == value) {
+          count++
+          if (count == n) {
+            return i
+          }
+        }
+      }
+    }
+  },
+
+  initial: function (array) { //获取除最后一个元素之外的所有array.
+    let res = []
+    for (let i = 0; i < array.length - 1; i++) {
+      res.push(array[i])
+    }
+    return res
+  },
+
+  intersection: function (arr, arrays) { //创建一个包含在所有给定数组中的唯一值数组，SameValueZero用于相等比较。结果值的顺序和引用由第一个数组确定。
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arrays.length; j++) {
+        if (arr[i] == arrays[j]) {
+          res.push(arr[i])
+        }
+      }
+    }
+    return res
+  },
+
+  join: function (array, separator = ',') {
+
+  },
+
+  last: function (array) {
+    for (i)
+    return array[array.length]
+  }
 
 
 
