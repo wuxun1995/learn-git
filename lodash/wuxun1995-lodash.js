@@ -215,9 +215,11 @@ var wuxun1995 = {
   },
 
   last: function (array) {
-    for (let i = 0; i < array.length; i++) {
+    if (Array.isArray) {
       return array[array.length - 1]
-  }
+    } else {
+      return array
+    }
   },
 
   lastIndexOf: function (array, value, n = array.length - 1) {
@@ -233,25 +235,39 @@ var wuxun1995 = {
   pull: function (array, ...values) {
     let res = []
     for (let i = 0; i < array.length; i++) {
-      if (Array.isArray(values)) {
-        for (let j = 0; j < values.length; j++) {
-          if (array[i] == values[j]) {
-
-          } else {
-            res.push(array[i])
-          }
-        }
+      if (values.includes(array[i])) {
+        array.splice(i, 1)
+        i--
       } else {
-        if (array[i] !== values) {
-          res.push(array[i])
+        continue
+      }
+    }
+    return array
+  },
+
+  reverse: function (array) {
+    let res = []
+    for (let i = array.length - 1; i >= 0; i--) {
+      res.push(array[i])
+    }
+    return res
+  },
+
+  sortedIndex: function (array, value) {
+
+  },
+
+  union: function (arr,...arrs) {
+    for (let i = 0; i < arrs.length; i++) {
+      let item = arrs[i]
+      for (let j = 0; j < item.length; j++) {
+        if (!arr.includes(item[j])) {
+          arr.push(item[j])
         }
       }
     }
-    return res
+    return arr
   }
-
-
-
 
 
 
