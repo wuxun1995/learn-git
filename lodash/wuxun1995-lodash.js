@@ -257,7 +257,7 @@ var wuxun1995 = {
 
   },
 
-  union: function (arr,...arrs) {
+  union: function (arr, ...arrs) {
     for (let i = 0; i < arrs.length; i++) {
       let item = arrs[i]
       for (let j = 0; j < item.length; j++) {
@@ -267,9 +267,77 @@ var wuxun1995 = {
       }
     }
     return arr
+  },
+
+
+
+  uniq: function (arr) {
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+      if (!res.includes(arr[i])) {
+        res.push(arr[i])
+      }
+    }
+    return res
+  },
+
+  uniqBy: function (array, iteratee) {
+    if (typeof (iteratee) !== 'function') {
+      iteratee = shorthand(iteratee)
+    }
+    let res = []
+    let temp = []
+    for (let i = 0; i < array.length; i++) {
+      let it = iteratee(array[i])
+      if (!temp.includes(it)) {
+        temp.push(it)
+        res.push(array[i])
+      }
+    }
+    return res
+  },
+
+  without: function (array, ...value) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      if (!value.includes(array[i])) {
+        res.push(array[i])
+      }
+    }
+    return res
+  },
+
+  xor: function (arr, ...arrs) {
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+      if (!arrs.includes(arr[i])) {
+        res.push(arr[i])
+        arrs.slice(arr[i])
+      }
+    }
+    res.push(arrs)
+    return res
+  },
+
+  unary: function (func) {
+    return function(val) {
+      return func(val)
+    }
+  },
+
+  zip: function (...ary) {
+    let result = []
+    for (let i = 0; i < ary[0].length; i++) {
+      let Ary = []
+      for (let j = 0; j < ary.length; j++) {
+        Ary.push(ary[j][i])
+      }
+      result.push(Ary)
+    }
+    return result
+  },
+
+  countBy: function (collection, [iteratee = _.identity]) {
+
   }
-
-
-
-
 }

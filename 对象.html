@@ -1,0 +1,31 @@
+<script>
+  function Complex(real, imag) {
+    this.real = real
+    this.imag = imag
+  }
+
+  Complex.prototype.plus = function(c) {
+    var real = this.real + c.real
+    var imag = this.imag + c.imag
+    return new Complex(real, imag)
+  }
+
+  Complex.prototype.minus = function(c) {
+    var real = this.real - c.real
+    var imag = this.imag - c.imag
+    return new Complex(real, imag)
+  }
+
+  Complex.prototype.mul = function(c) {
+    var real = this.real * c.real - this.imag * c.imag
+    var imag = this.real * c.imag + this.imag * c.real
+    return new Complex(real, imag)
+  }
+
+  Complex.prototype.div = function(c) {
+    var helper = new Complex(c.real, -c.imag)
+    var fenzi = this.mul(helper)
+    var fenmu = c.mul(helper)
+    return new Complex(real / m, imag / m)
+  }
+</script>
