@@ -337,7 +337,78 @@ var wuxun1995 = {
     return result
   },
 
-  countBy: function (collection, [iteratee = _.identity]) {
+  countBy: function (collection, iteratee) {
+    let obj = {}
+    for (var i = 0; i < collection.length; i++) {
+      if (typeof (iteratee) == 'string') {
+        if (!obj[collection[i][iteratee]]) {
+          obj[collection[i][iteratee]] = 1
+        } else {
+          obj[collection[i][iteratee]]++
+        }
+      } else {
+        if (!obj[iteratee(collection[i])]) {
+          obj[iteratee(collection[i])] = 1
+        } else {
+          obj[iteratee(collection[i])]++
+        }
+      }
+    }
+    return obj
+  },
 
-  }
+  every: function (collection, predicate) {
+    if (typeof predicate !== 'function') {
+      predicate = this.func(predicate)
+    }
+    for (key in collection) {
+      if (!predicate(collection[key])) {
+        return false
+      }
+    }
+    return true
+  },
+
+  filter: function (collection, predicate) {
+    let temp = collection
+    let predicate = this.iteratee(predicate)
+    for (var i = 0; i < temp.length; i++) {
+      if (!predicate(temp[i])) {
+        temp.splice(i, 1)
+        i--
+      }
+    }
+    return temp
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
